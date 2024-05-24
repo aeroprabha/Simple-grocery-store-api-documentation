@@ -33,11 +33,54 @@ Alternative URL: [http://simple-grocery-store-api.online/](http://simple-grocery
 
 Returns the status of the API. Example response:
 
-```json
 {
   "status": "UP"
 }
-## Get a product
+
+Status UP indicates that the API is running as expected.
+No response or any other response indicates that the API is not functioning correctly.
+
+## Products
+
+### Get all products
+
+**GET /products**
+
+Returns a list of products from the inventory.
+
+#### Parameters
+
+| Name      | Type    | In    | Required | Description                                                                                      |
+|-----------|---------|-------|----------|--------------------------------------------------------------------------------------------------|
+| category  | string  | query | No       | Specifies the category of products you want to be returned. It can be one of: meat-seafood, fresh-produce, candy, bread-bakery, dairy, eggs, coffee. |
+| results   | integer | query | No       | Specifies the number of results you want. Must be a number between 1 and 20. By default, only 20 products will be displayed. |
+| available | boolean | query | No       | Specifies the availability of the products. By default, all products will be displayed.          |
+
+#### Status codes
+
+| Status code      | Description                                    |
+|------------------|------------------------------------------------|
+| 200 OK           | Indicates a successful response.               |
+| 400 Bad Request  | Indicates that the parameters provided are invalid. |
+
+#### Example response
+
+[
+{
+"id": 4643,
+"category": "coffee",
+"name": "Starbucks Coffee Variety Pack, 100% Arabica",
+"inStock": true
+},
+{
+"id": 4646,
+"category": "coffee",
+"name": "Ethical Bean Medium Dark Roast, Espresso",
+"inStock": true
+},
+...
+]
+
 
 **GET /products/:productId**
 
@@ -117,7 +160,6 @@ No parameters are accepted for this request.
 
 #### Example response body
 
-```json
 {
   "created": true,
   "cartId": "bx0-ycNjqIm5IvufuuZ09"

@@ -31,7 +31,9 @@ Alternative URL: [http://simple-grocery-store-api.online/](http://simple-grocery
 
 ### GET /status
 
-Returns the status of the API. Example response:
+Returns the status of the API. 
+
+**Example response:**
 
 {
   "status": "UP"

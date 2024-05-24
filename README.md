@@ -37,7 +37,6 @@ Returns the status of the API. Example response:
 {
   "status": "UP"
 }
-
 ## Get a product
 
 **GET /products/:productId**

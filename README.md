@@ -35,9 +35,10 @@ Returns the status of the API.
 
 **Example response:**
 
+```json
 {
   "status": "UP"
-}
+}```
 
 Status UP indicates that the API is running as expected.
 No response or any other response indicates that the API is not functioning correctly.
@@ -67,6 +68,7 @@ Returns a list of products from the inventory.
 
 #### Example response
 
+```json
 [
 {
 "id": 4643,
@@ -81,7 +83,7 @@ Returns a list of products from the inventory.
 "inStock": true
 },
 ...
-]
+]```
 
 
 **GET /products/:productId**
